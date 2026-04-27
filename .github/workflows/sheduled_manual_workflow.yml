@@ -1,0 +1,10 @@
+name: Scheduled Manual Workflow
+on: 
+    workflow_dispatch:
+    schedule:
+        - cron: '0 7 * * 1-5' 
+jobs:
+    dummy:
+        runs-on: ubuntu-latest
+        steps: 
+            - run: echo "Running scheduled workflow at 7:00 AM on weekdays or triggered manually."
