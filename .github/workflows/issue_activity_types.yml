@@ -1,0 +1,12 @@
+name: Issue Activity Types Workflow
+on:
+    issues:
+        types: [opened, labeled]
+jobs:
+    dummy:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                echo "Issue activity detected. This job runs for opened and edited events."
+                ls -la
+                echo "Done"

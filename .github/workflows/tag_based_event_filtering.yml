@@ -1,0 +1,11 @@
+name: Tag Based Event Filtering
+on:
+    push:
+        tags:
+            - 'v*.*.*'
+jobs:
+    dummy:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                echo "This workflow is triggered by pushes to tags matching the pattern v*.*.*"
