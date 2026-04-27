@@ -1,0 +1,17 @@
+name: Branch Filters Workflow
+on:
+    push:
+        branches:
+            - dev
+            - 'release/**'
+        tags-ignore:
+            - '**'
+jobs:
+    dummy:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                echo "Triggered by push to develop or release/* branches."
+                echo "Tag pushes are ignored"
+        
+                

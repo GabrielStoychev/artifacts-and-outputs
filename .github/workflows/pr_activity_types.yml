@@ -1,0 +1,12 @@
+name: PR Activity Types
+on:
+    pull_request:
+        types: [opened, reopened, synchronize]
+jobs:
+    dummy:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                echo "Pull request activity detected. This job runs for opened, reopened, and committed events."
+                ls -la
+                echo "Done"

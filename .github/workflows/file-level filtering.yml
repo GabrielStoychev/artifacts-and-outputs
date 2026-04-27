@@ -1,0 +1,18 @@
+name: File level filtering
+on:
+    pull_request:
+        branches:
+            -  main
+        paths:
+            - 'backend/**'
+            - 'api/**'
+        paths-ignore:
+            - 'README.md'
+            
+jobs:
+    dummy:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                echo "File leveling system"
+                
