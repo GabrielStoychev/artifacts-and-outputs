@@ -4,6 +4,7 @@ import logo from './assets/images/logo.png';
 function App() {
   return (
     <>
+    //My tests
       <header>
         <div id="logo-img">
           <img src={logo} />
